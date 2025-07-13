@@ -28,3 +28,16 @@ These repo contains two projects related to color detection using OpenCV and obj
         ==================================================== 1 passed in 0.16s =====================================================
         
         ```
+
+## 2. [HuskyLens Object Detection](./huskylens/README.md)
+   - This project uses the HuskyLens AI camera to detect objects and print their IDs.
+        ### Setup Instructions
+    - Ensure you have the HuskyLens library installed in your Arduino IDE.
+    - Upload the `src.ino` sketch to your HuskyLens device.
+    - Open the Serial Monitor to view detected object IDs.
+    
+        ```console
+        HuskyLens ready in Object Recognition mode
+        Object ID: 1, X: 100, Y: 150, Width: 50, Height: 50
+        Object ID: 2, X: 200, Y: 250, Width: 60, Height: 60
+        ```
