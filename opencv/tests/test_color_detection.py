@@ -1,5 +1,5 @@
 import pytest
-from .main import create_test_image, detect_colors, generate_report
+from ..main import create_test_image, detect_colors, generate_report
 
 def test_color_detection():
     """Test basic color detection functionality"""
