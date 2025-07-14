@@ -1,4 +1,4 @@
-name: OpenCV Color Detection Test
+name: Build and Test OpenCV App
 
 on:
   push:
@@ -7,13 +7,18 @@ on:
     branches: [ develop ]
 
 jobs:
-  test:
+  build-and-run:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Build Docker image
-        run: docker build -t opencv-test ./opencv
-        
-      - name: Run tests
-        run: docker run --rm opencv-test
+        run: docker build -t app ./opencv
+
+      - name: Run Docker container
+        run: docker run --rm app
